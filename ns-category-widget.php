@@ -14,14 +14,14 @@
    {
     die;
   }
-  define('NS_PLUGIN_NAME','NS Category Widget');
-  define('NS_PLUGIN_SLUG','ns-category-widget');
+  define('NS_CATEGORY_WIDGET_NAME','NS Category Widget');
+  define('NS_CATEGORY_WIDGET_SLUG','ns-category-widget');
 
  /**
  * NS_Category_Widget
  */
  class NS_Category_Widget extends WP_Widget {
-  protected $plugin_slug = NS_PLUGIN_SLUG ;
+  protected $plugin_slug = NS_CATEGORY_WIDGET_SLUG ;
   /**
   * Declares the NS_Category_Widget class.
   *
@@ -35,7 +35,7 @@
       'classname'     =>  'widget_ns_category_widget',
       'description'   =>  __( "Widget for displaying categories in your way",$this->plugin_slug) );
 
-    $this->WP_Widget( NS_PLUGIN_SLUG, NS_PLUGIN_NAME, $widget_ops );
+    $this->WP_Widget( NS_CATEGORY_WIDGET_SLUG, NS_CATEGORY_WIDGET_NAME, $widget_ops );
   }
 
   function widget( $args, $instance ) {
