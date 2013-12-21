@@ -3,8 +3,8 @@ Contributors: rabmalin
 Donate link: http://www.nilambar.net
 Tags: category, listing, widget,
 Requires at least: 3.5.1
-Tested up to: 3.7.1
-Stable tag: 1.0
+Tested up to: 3.8
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -43,6 +43,8 @@ Nice, make a post on the [Support Forum](http://wordpress.org/support/plugin/ns-
 1. Adding widget in sidebar
 
 == Changelog ==
+= 1.1 =
+* Bug fix
 
 = 1.0 =
 * Initial release

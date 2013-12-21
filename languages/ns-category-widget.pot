@@ -1,123 +1,144 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ns-category-widget\n"
-"POT-Creation-Date: 2013-12-09 12:00+0545\n"
-"PO-Revision-Date: 2013-12-09 12:08+0545\n"
+"POT-Creation-Date: 2013-12-22 00:03+0545\n"
+"PO-Revision-Date: 2013-12-22 00:05+0545\n"
 "Last-Translator: Nilambar Sharma <nilambar@outlook.com>\n"
 "Language-Team: \n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6\n"
+"X-Generator: Poedit 1.5.4\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: ../../ns-category-widget\n"
 
-#: ../../ns-category-widget/ns-category-widget.php:38
+#: ../../ns-category-widget/ns-category-widget.php:36
 msgid "Widget for displaying categories in your way"
 msgstr "Widget for displaying categories in your way"
 
-#: ../../ns-category-widget/ns-category-widget.php:120
+#: ../../ns-category-widget/ns-category-widget.php:140
 msgid "Title:"
 msgstr "Title:"
 
-#: ../../ns-category-widget/ns-category-widget.php:127
+#: ../../ns-category-widget/ns-category-widget.php:147
 msgid "Parent Category:"
 msgstr "Parent Category:"
 
-#: ../../ns-category-widget/ns-category-widget.php:136
-#: ../../ns-category-widget/ns-category-widget.php:146
+#: ../../ns-category-widget/ns-category-widget.php:156
+#: ../../ns-category-widget/ns-category-widget.php:166
 msgid "Show All"
 msgstr "Show All"
 
-#: ../../ns-category-widget/ns-category-widget.php:143
+#: ../../ns-category-widget/ns-category-widget.php:163
 msgid "Depth:"
 msgstr "Depth:"
 
-#: ../../ns-category-widget/ns-category-widget.php:147
+#: ../../ns-category-widget/ns-category-widget.php:167
 msgid "1"
 msgstr "1"
 
-#: ../../ns-category-widget/ns-category-widget.php:148
+#: ../../ns-category-widget/ns-category-widget.php:168
 msgid "2"
 msgstr "2"
 
-#: ../../ns-category-widget/ns-category-widget.php:149
+#: ../../ns-category-widget/ns-category-widget.php:169
 msgid "3"
 msgstr "3"
 
-#: ../../ns-category-widget/ns-category-widget.php:150
+#: ../../ns-category-widget/ns-category-widget.php:170
 msgid "4"
 msgstr "4"
 
-#: ../../ns-category-widget/ns-category-widget.php:151
+#: ../../ns-category-widget/ns-category-widget.php:171
 msgid "5"
 msgstr "5"
 
-#: ../../ns-category-widget/ns-category-widget.php:152
+#: ../../ns-category-widget/ns-category-widget.php:172
 msgid "6"
 msgstr "6"
 
-#: ../../ns-category-widget/ns-category-widget.php:153
+#: ../../ns-category-widget/ns-category-widget.php:173
 msgid "7"
 msgstr "7"
 
-#: ../../ns-category-widget/ns-category-widget.php:154
+#: ../../ns-category-widget/ns-category-widget.php:174
 msgid "8"
 msgstr "8"
 
-#: ../../ns-category-widget/ns-category-widget.php:155
+#: ../../ns-category-widget/ns-category-widget.php:175
 msgid "9"
 msgstr "9"
 
-#: ../../ns-category-widget/ns-category-widget.php:156
+#: ../../ns-category-widget/ns-category-widget.php:176
 msgid "10"
 msgstr "10"
 
-#: ../../ns-category-widget/ns-category-widget.php:162
+#: ../../ns-category-widget/ns-category-widget.php:182
 msgid "Sort By:"
 msgstr "Sort By:"
 
-#: ../../ns-category-widget/ns-category-widget.php:165
+#: ../../ns-category-widget/ns-category-widget.php:185
 msgid "ID"
 msgstr "ID"
 
-#: ../../ns-category-widget/ns-category-widget.php:166
+#: ../../ns-category-widget/ns-category-widget.php:186
 msgid "Name"
 msgstr "Name"
 
-#: ../../ns-category-widget/ns-category-widget.php:167
+#: ../../ns-category-widget/ns-category-widget.php:187
 msgid "Slug"
 msgstr "Slug"
 
-#: ../../ns-category-widget/ns-category-widget.php:168
+#: ../../ns-category-widget/ns-category-widget.php:188
 msgid "Count"
 msgstr "Count"
 
-#: ../../ns-category-widget/ns-category-widget.php:173
+#: ../../ns-category-widget/ns-category-widget.php:193
 msgid "Sort Order:"
 msgstr "Sort Order:"
 
-#: ../../ns-category-widget/ns-category-widget.php:176
+#: ../../ns-category-widget/ns-category-widget.php:196
 msgid "Ascending"
 msgstr "Ascending"
 
-#: ../../ns-category-widget/ns-category-widget.php:177
+#: ../../ns-category-widget/ns-category-widget.php:197
 msgid "Descending"
 msgstr "Descending"
 
-#: ../../ns-category-widget/ns-category-widget.php:183
+#: ../../ns-category-widget/ns-category-widget.php:203
 msgid "Hide Empty"
 msgstr "Hide Empty"
 
-#: ../../ns-category-widget/ns-category-widget.php:190
+#: ../../ns-category-widget/ns-category-widget.php:210
 msgid "Show Post Count"
 msgstr "Show Post Count"
 
-#: ../../ns-category-widget/ns-category-widget.php:196
+#: ../../ns-category-widget/ns-category-widget.php:216
 msgid "Limit:"
 msgstr "Limit:"
+
+#: ../../ns-category-widget/ns-category-widget.php:218
+msgid "Enter limit in number"
+msgstr "Enter limit in number"
+
+#: ../../ns-category-widget/ns-category-widget.php:224
+msgid "Include category:"
+msgstr "Include category:"
+
+#: ../../ns-category-widget/ns-category-widget.php:227
+#: ../../ns-category-widget/ns-category-widget.php:237
+msgid "Category IDs, separated by commas."
+msgstr "Category IDs, separated by commas."
+
+#: ../../ns-category-widget/ns-category-widget.php:227
+msgid "Only displays these categories"
+msgstr "Only displays these categories"
+
+#: ../../ns-category-widget/ns-category-widget.php:234
+msgid "Exclude category:"
+msgstr "Exclude category:"
 
 #~ msgid "Nepali Date Settings Page"
 #~ msgstr "नेपाली मिति व्यवस्थापन पृष्ठ"

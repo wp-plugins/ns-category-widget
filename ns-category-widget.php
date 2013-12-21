@@ -3,7 +3,7 @@
    * Plugin Name: NS Category Widget
    * Plugin URI: http://nilambar.net
    * Description: A widget plugin for listing categories in the way you want.
-   * Version: 1.0
+   * Version: 1.1
    * Author: Nilambar Sharma
    * Author URI: http://nilambar.net
    * License: GPLv2 or later
@@ -50,6 +50,11 @@
     $hide_empty       =   $instance['hide_empty'];
     $show_post_count  =   $instance['show_post_count'];
     $number           =   $instance['number'];
+    $include_category =   $instance['include_category'];
+    $exclude_category =   $instance['exclude_category'];
+    if( '' != $exclude_category  ){
+      $include_category = '';
+    }
 
     echo $before_widget;
     if ( $title ){
@@ -63,8 +68,11 @@
       'hide_empty'  =>  $hide_empty,
       'show_count'  =>  $show_post_count,
       'number'      =>  $number,
+      'include'     =>  $include_category,
+      'exclude'     =>  $exclude_category,
 
       );
+
     if($parent_category){
       $cat_args['child_of'] = $parent_category;
     }
@@ -86,6 +94,16 @@
     $instance['hide_empty']       = !empty($new_instance['hide_empty']) ? 1 : 0;
     $instance['show_post_count']  = !empty($new_instance['show_post_count']) ? 1 : 0;
     $instance['number']           = ( ! empty( $new_instance['number'] ) ) ? intval( strip_tags( $new_instance['number'] )  ): '';
+    $instance['include_category'] = trim( strip_tags($new_instance['include_category']) );
+
+    $str = explode( ',', $instance['include_category'] );
+    array_walk( $str, 'intval' );
+    $instance['include_category'] = implode(',',  $str );
+
+    $instance['exclude_category'] = strip_tags($new_instance['exclude_category']);
+    $str = explode( ',', $instance['exclude_category'] );
+    array_walk( $str, 'intval' );
+    $instance['exclude_category'] = implode(',',  $str );
 
     return $instance;
 
@@ -102,6 +120,8 @@
       'hide_empty'      =>  0,
       'show_post_count' =>  0,
       'number'          =>  '',
+      'include_category'=>  '',
+      'exclude_category'=>  '',
       ) );
     $title            =   htmlspecialchars($instance['title']);
     $parent_category  =   isset($instance['parent_category']) ? esc_attr($instance['parent_category']) : '';
@@ -111,6 +131,8 @@
     $hide_empty       =   isset($instance['hide_empty']) ? esc_attr($instance['hide_empty']) : '';
     $show_post_count  =   isset($instance['show_post_count']) ? esc_attr($instance['show_post_count']) : '';
     $number           =   htmlspecialchars($instance['number']);
+    $include_category =   htmlspecialchars($instance['include_category']);
+    $exclude_category =   htmlspecialchars($instance['exclude_category']);
 
     ?>
     <p>
@@ -193,11 +215,29 @@
       <label for="<?php echo $this->get_field_id('number'); ?>">
         <?php _e('Limit:', $this->plugin_slug); ?>
         <input class="" id="<?php echo $this->get_field_id('number'); ?>"
-        name="<?php echo $this->get_field_name('number'); ?>" type="text" value="<?php echo $number; ?>" size="3"/>
+        name="<?php echo $this->get_field_name('number'); ?>" type="text" value="<?php echo $number; ?>" size="3"/>&nbsp;<small><?php _e('Enter limit in number', $this->plugin_slug); ?></small>
+      </label>
+
+    </p>
+    <p>
+      <label for="<?php echo $this->get_field_id('include_category'); ?>">
+        <?php _e('Include category:', $this->plugin_slug); ?>
+        <input class="widefat" id="<?php echo $this->get_field_id('include_category'); ?>"
+        name="<?php echo $this->get_field_name('include_category'); ?>" type="text" value="<?php echo $include_category; ?>"/>
+        <small><?php _e('Category IDs, separated by commas.', $this->plugin_slug); ?>[<strong><?php _e('Only displays these categories', $this->plugin_slug); ?></strong>]</small>
       </label>
 
     </p>
 
+    <p>
+          <label for="<?php echo $this->get_field_id('exclude_category'); ?>">
+            <?php _e('Exclude category:', $this->plugin_slug); ?>
+            <input class="widefat" id="<?php echo $this->get_field_id('exclude_category'); ?>"
+            name="<?php echo $this->get_field_name('exclude_category'); ?>" type="text" value="<?php echo $exclude_category; ?>"/>
+            <small><?php _e('Category IDs, separated by commas.', $this->plugin_slug); ?></small>
+          </label>
+
+        </p>
 
 
     <?php
@@ -214,3 +254,4 @@ function register_ns_category_widget() {
   register_widget('NS_Category_Widget');
 }
 add_action( 'widgets_init', 'register_ns_category_widget');
+
