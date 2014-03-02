@@ -3,7 +3,7 @@
    * Plugin Name: NS Category Widget
    * Plugin URI: http://nilambar.net
    * Description: A widget plugin for listing categories in the way you want.
-   * Version: 1.1
+   * Version: 1.2
    * Author: Nilambar Sharma
    * Author URI: http://nilambar.net
    * License: GPLv2 or later
