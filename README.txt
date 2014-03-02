@@ -14,9 +14,9 @@ A plugin to add widget listing categories. Extending Default Wordpress Category 
 
 Are you frustrated by the lack of customization options in default Category widget in WordPress? Then this plugin is for you. Works similarly but with several customization options. Cheers !
 
-=== Translation ===
-- English (en_US)
-- Russian (ru_RU)   
+= Translation =
+1. English (en_US)
+1. Russian (ru_RU) [Thanks to Flector]         
 If you want to add your language, then please send me your translation files. 
 
 == Installation ==
