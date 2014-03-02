@@ -16,7 +16,7 @@ Are you frustrated by the lack of customization options in default Category widg
 
 = Translation =
 1. English (en_US)
-1. Russian (ru_RU)    
+1. Russian (ru_RU) [Thanks to Flector]         
 If you want to add your language, then please send me your translation files. 
 
 == Installation ==
