@@ -1,10 +1,10 @@
 === NS Category Widget ===
 Contributors: rabmalin
 Donate link: http://www.nilambar.net/2013/12/ns-category-widget-wordpress-plugin.html
-Tags: category, listing, widget, list, post
+Tags: category, listing, widget, list, post, posts, sidebar
 Requires at least: 3.5.1
-Tested up to: 3.8.1
-Stable tag: 1.2
+Tested up to: 3.9
+Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -48,6 +48,10 @@ Nice, make a post on the [Support Forum](http://wordpress.org/support/plugin/ns-
 1. Adding widget in sidebar
 
 == Changelog ==
+
+= 1.3 =
+* Bug fixes
+* Compatibility check for 3.9
 
 = 1.2 =
 * Bug fixes
