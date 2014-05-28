@@ -3,7 +3,7 @@
    * Plugin Name: NS Category Widget
    * Plugin URI: http://nilambar.net
    * Description: A widget plugin for listing categories in the way you want.
-   * Version: 1.4
+   * Version: 1.4.1
    * Author: Nilambar Sharma
    * Author URI: http://nilambar.net
    * License: GPLv2 or later
@@ -152,7 +152,7 @@
       <label for="<?php echo $this->get_field_id('taxonomy'); ?>">
         <?php _e('Taxonomy:', 'ns-category-widget'); ?>
       </label>
-      <select id="<?php echo $this->get_field_id( 'taxonomy' ); ?>" name="<?php echo $this->get_field_name( 'taxonomy' ); ?>" >
+      <select id="<?php echo $this->get_field_id( 'taxonomy' ); ?>" name="<?php echo $this->get_field_name( 'taxonomy' ); ?>" class="nscw-taxonomy" data-name="<?php echo $this->get_field_name('parent_category'); ?>" data-id="<?php echo $this->get_field_id('parent_category'); ?>" >
         <?php foreach ($wp_taxonomies as $taxonomy_item) {
           if ( in_array($taxonomy_item->name, array('post_format', 'post_tag', 'link_category', 'nav_menu' ) ) == false ) {
             echo '<option '.selected( $taxonomy, $taxonomy_item->name, false ) . ' value="'.$taxonomy_item->name.'">'.$taxonomy_item->label.'</option>';
@@ -166,12 +166,14 @@
       </label>
       <?php
       $cat_args = array(
-        'orderby'             =>  'slug',
-        'hide_empty'          =>  0,
-        'name'                =>  $this->get_field_name('parent_category'),
-        'id'                  =>  $this->get_field_id('parent_category'),
-        'selected'            =>  $parent_category,
-        'show_option_all'     =>  __('Show All','ns-category-widget'),
+        'orderby'         =>  'slug',
+        'hide_empty'      =>  0,
+        'taxonomy'      =>  $taxonomy,
+        'name'            =>  $this->get_field_name('parent_category'),
+        'id'              =>  $this->get_field_id('parent_category'),
+        'class'           =>  'nscw-cat-list',
+        'selected'        =>  $parent_category,
+        'show_option_all' =>  __('Show All','ns-category-widget'),
         );
       wp_dropdown_categories(apply_filters('widget_categories_dropdown_args', $cat_args));
       ?>
@@ -232,7 +234,7 @@
     <p>
       <label for="<?php echo $this->get_field_id('number'); ?>">
         <?php _e('Limit:', 'ns-category-widget'); ?>
-        <input class="" id="<?php echo $this->get_field_id('number'); ?>"
+        <input class="" type="number" min="0" id="<?php echo $this->get_field_id('number'); ?>"
         name="<?php echo $this->get_field_name('number'); ?>" type="text" value="<?php echo $number; ?>" size="3"/>&nbsp;<small><?php _e('Enter limit in number', 'ns-category-widget'); ?></small>
       </label>
 
@@ -272,4 +274,48 @@ function register_ns_category_widget() {
   register_widget('NS_Category_Widget');
 }
 add_action( 'widgets_init', 'register_ns_category_widget');
+
+
+// queue up the necessary js
+function ns_category_widget_upload_enqueue($hook)
+{
+  if( $hook != 'widgets.php' )
+      return;
+
+  wp_register_script( 'ns-category-widget-script', plugins_url( 'ns-category-widget.js', __FILE__ ) );
+  wp_localize_script( 'ns-category-widget-script', 'ns_category_widget_ajax_object', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
+  wp_enqueue_script('ns-category-widget-script');
+
+}
+add_action('admin_enqueue_scripts', 'ns_category_widget_upload_enqueue');
+
+
+function ns_category_widget_ajax_populate_categories(){
+  $output = array();
+  $output['status'] = 0;
+
+  // wp_send_json_success($_POST);
+
+  $taxonomy = $_POST['taxonomy'];
+  $name = $_POST['name'];
+  $id = $_POST['id'];
+
+  $cat_args = array(
+    'orderby'         =>  'slug',
+    'taxonomy'         =>  $taxonomy,
+    'echo'         =>  '0',
+    'hide_empty'      =>  0,
+    'name'            =>  $name,
+    'id'              =>  $id,
+    'class'           =>  'nscw-cat-list',
+    'show_option_all' =>  __('Show All','ns-category-widget'),
+    );
+  $output['html'] = wp_dropdown_categories(apply_filters('widget_categories_dropdown_args', $cat_args));
+  $output['status'] = 1;
+
+  wp_send_json($output);
+}
+
+add_action( 'wp_ajax_populate_categories', 'ns_category_widget_ajax_populate_categories' );
+add_action( 'wp_ajax_nopriv_populate_categories', 'ns_category_widget_ajax_populate_categories' );
 
