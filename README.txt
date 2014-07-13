@@ -4,11 +4,11 @@ Donate link: http://www.nilambar.net/2013/12/ns-category-widget-wordpress-plugin
 Tags: category, listing, widget, list, post, posts, sidebar
 Requires at least: 3.5.1
 Tested up to: 3.9.1
-Stable tag: 1.4.1
+Stable tag: 1.4.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A plugin to add widget listing categories. Extending Default Wordpress Category Widget
+A plugin to add widget for listing Categories and Taxonomies. Extending Default Wordpress Category Widget
 
 == Description ==
 
@@ -16,7 +16,10 @@ Are you frustrated by the lack of customization options in default Category widg
 
 = Translation =
 1. English (en_US)
-1. Russian (ru_RU) [Thanks to Flector]
+1. Russian (ru_RU) { Thanks to Flector }
+1. Spanish (es_ES) { Thanks to [Ogi Djuraskovic](http://firstsiteguide.com/) }
+1. Serbian (sr_RS) { Thanks to [Ogi Djuraskovic](http://firstsiteguide.com/) }
+
 If you want to add your language, then please send me your translation files.
 
 == Installation ==
@@ -48,6 +51,10 @@ Nice, make a post on the [Support Forum](http://wordpress.org/support/plugin/ns-
 1. Adding widget in sidebar
 
 == Changelog ==
+
+= 1.4.2 =
+* Language File: Spanish [Thanks to Ogi Djuraskovic (http://firstsiteguide.com/) ]
+* Language File: Serbian [Thanks to Ogi Djuraskovic (http://firstsiteguide.com/) ]
 
 = 1.4.1 =
 * Bug fix: Change category list according to selected taxonomy

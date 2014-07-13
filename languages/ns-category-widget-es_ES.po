@@ -1,0 +1,144 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ns-category-widget-ru_RU\n"
+"POT-Creation-Date: 2013-12-22 00:03+0545\n"
+"PO-Revision-Date: 2014-07-09 14:09+0100\n"
+"Last-Translator: jelena kovacevic <jecajeca260@gmail.com>\n"
+"Language-Team: Flector <rlector@gmail.com>\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ../../ns-category-widget\n"
+
+#: ../../ns-category-widget/ns-category-widget.php:36
+msgid "Widget for displaying categories in your way"
+msgstr "Widget para visualizar las categorías en el camino"
+
+#: ../../ns-category-widget/ns-category-widget.php:140
+msgid "Title:"
+msgstr "Título:"
+
+#: ../../ns-category-widget/ns-category-widget.php:147
+msgid "Parent Category:"
+msgstr "Categoría Superior:"
+
+#: ../../ns-category-widget/ns-category-widget.php:156
+#: ../../ns-category-widget/ns-category-widget.php:166
+msgid "Show All"
+msgstr "Mostrar Todo"
+
+#: ../../ns-category-widget/ns-category-widget.php:163
+msgid "Depth:"
+msgstr "Profundidad:"
+
+#: ../../ns-category-widget/ns-category-widget.php:167
+msgid "1"
+msgstr "1"
+
+#: ../../ns-category-widget/ns-category-widget.php:168
+msgid "2"
+msgstr "2"
+
+#: ../../ns-category-widget/ns-category-widget.php:169
+msgid "3"
+msgstr "3"
+
+#: ../../ns-category-widget/ns-category-widget.php:170
+msgid "4"
+msgstr "4"
+
+#: ../../ns-category-widget/ns-category-widget.php:171
+msgid "5"
+msgstr "5"
+
+#: ../../ns-category-widget/ns-category-widget.php:172
+msgid "6"
+msgstr "6"
+
+#: ../../ns-category-widget/ns-category-widget.php:173
+msgid "7"
+msgstr "7"
+
+#: ../../ns-category-widget/ns-category-widget.php:174
+msgid "8"
+msgstr "8"
+
+#: ../../ns-category-widget/ns-category-widget.php:175
+msgid "9"
+msgstr "9"
+
+#: ../../ns-category-widget/ns-category-widget.php:176
+msgid "10"
+msgstr "10"
+
+#: ../../ns-category-widget/ns-category-widget.php:182
+msgid "Sort By:"
+msgstr "Ordenar Por:"
+
+#: ../../ns-category-widget/ns-category-widget.php:185
+msgid "ID"
+msgstr "ID"
+
+#: ../../ns-category-widget/ns-category-widget.php:186
+msgid "Name"
+msgstr "Nombre"
+
+#: ../../ns-category-widget/ns-category-widget.php:187
+msgid "Slug"
+msgstr "Alias"
+
+#: ../../ns-category-widget/ns-category-widget.php:188
+msgid "Count"
+msgstr "Cantidad"
+
+#: ../../ns-category-widget/ns-category-widget.php:193
+msgid "Sort Order:"
+msgstr "Orden:"
+
+#: ../../ns-category-widget/ns-category-widget.php:196
+msgid "Ascending"
+msgstr "Ascendente"
+
+#: ../../ns-category-widget/ns-category-widget.php:197
+msgid "Descending"
+msgstr "Descendente"
+
+#: ../../ns-category-widget/ns-category-widget.php:203
+msgid "Hide Empty"
+msgstr "Ocultar lo Vacío"
+
+#: ../../ns-category-widget/ns-category-widget.php:210
+msgid "Show Post Count"
+msgstr "Mostrar la Cantidad de Post"
+
+#: ../../ns-category-widget/ns-category-widget.php:216
+msgid "Limit:"
+msgstr "Límite:"
+
+#: ../../ns-category-widget/ns-category-widget.php:218
+msgid "Enter limit in number"
+msgstr "Introducir el límite en número "
+
+#: ../../ns-category-widget/ns-category-widget.php:224
+msgid "Include category:"
+msgstr "Incluir categoría:"
+
+#: ../../ns-category-widget/ns-category-widget.php:227
+#: ../../ns-category-widget/ns-category-widget.php:237
+msgid "Category IDs, separated by commas."
+msgstr "IDs de las categorías, separados por comas."
+
+#: ../../ns-category-widget/ns-category-widget.php:227
+msgid "Only displays these categories"
+msgstr "Solo mostrar estas categorías"
+
+#: ../../ns-category-widget/ns-category-widget.php:234
+msgid "Exclude category:"
+msgstr "Excluir categoría:"
