@@ -1,7 +1,10 @@
-// console.log( ns_category_widget_ajax_object) ;
-
 jQuery(document).ready( function($){
-  //Some event will trigger the ajax call, you can push whatever data to the server, simply passing it to the "data" object in ajax call
+
+  $('body').on( 'click', '.btn-show-advanced-tree-settings', function(e){
+    e.preventDefault();
+    $(this).parent().parent().find('.advanced-tree-settings-wrap').fadeToggle();
+
+  })
 
   jQuery('body').on('change','.nscw-taxonomy',function(){
 
@@ -18,22 +21,15 @@ jQuery(document).ready( function($){
       type: 'POST',
       data: our_data,
       success: function( result ){
-        //Do something with the result from server
         if ( 1 == result.status) {
-          // console.log( result );
           our_html = result.html;
           var target = $(tthis).parent().parent().find('.nscw-cat-list');
           $(target).html(our_html);
-          // console.log(  );
-
-
         }
       }
     });
 
   }); // end change .nscw-taxonomy
 
-
-
-  //////////////////////////////
+//////////////////////////////
 });

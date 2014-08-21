@@ -1,7 +1,7 @@
 === NS Category Widget ===
 Contributors: rabmalin
-Donate link: http://www.nilambar.net/2013/12/ns-category-widget-wordpress-plugin.html
-Tags: category, listing, widget, list, post, posts, sidebar
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=ramrojob1%40gmail%2ecom&lc=US&item_name=Nilambar%20Sharma&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
+Tags: category, listing, widget, list, post, posts, sidebar, taxonomy, custom taxonomy, parent category
 Requires at least: 3.5.1
 Tested up to: 3.9.1
 Stable tag: 1.4.2
@@ -40,6 +40,9 @@ If you want to add your language, then please send me your translation files.
 1. Place the 'NS Category Widget' into a Widget area through the 'Appearance -> Widgets' menu in WordPress.
 
 == Frequently Asked Questions ==
+= Is only Category is supported in listing? =
+You can list Category as well as Custom Taxonomy also.
+
 = There is something cool you could add... =
 
 Nice, make a post on the [Support Forum](http://wordpress.org/support/plugin/ns-category-widget) and let us know.
@@ -51,6 +54,13 @@ Nice, make a post on the [Support Forum](http://wordpress.org/support/plugin/ns-
 1. Adding widget in sidebar
 
 == Changelog ==
+
+= 2.0 =
+* Feature: Tree (Expandable) feature is added in category listing
+* Feature: Plugin option page is added under Settings menu
+* Feature: Styles for Tree can be enabled/disabled from admin panel
+* Feature: Tree settings can be customized for individual widget
+* Bug Fix: Minor bug fixes
 
 = 1.4.2 =
 * Language File: Spanish [Thanks to Ogi Djuraskovic (http://firstsiteguide.com/) ]
