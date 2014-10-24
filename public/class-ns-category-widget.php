@@ -22,7 +22,7 @@ class NS_Category_Widget {
 	 *
 	 * @var     string
 	 */
-	const VERSION = '2.0';
+	const VERSION = '2.0.1';
 
 	/**
 	 * Unique identifier for your plugin.

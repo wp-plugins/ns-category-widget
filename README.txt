@@ -3,8 +3,8 @@ Contributors: rabmalin
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=ramrojob1%40gmail%2ecom&lc=US&item_name=Nilambar%20Sharma&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 Tags: category, listing, widget, list, post, posts, sidebar, taxonomy, custom taxonomy, parent category
 Requires at least: 3.5.1
-Tested up to: 3.9.1
-Stable tag: 2.0
+Tested up to: 4.0
+Stable tag: 2.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -54,6 +54,10 @@ Nice, make a post on the [Support Forum](http://wordpress.org/support/plugin/ns-
 1. Adding widget in sidebar
 
 == Changelog ==
+
+= 2.0 =
+* Bug fix
+* WP 4.0 compatibility check
 
 = 2.0 =
 * Feature: Tree (Expandable) feature is added in category listing
